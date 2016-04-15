@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@+id/RelativeLayout1" android:background="#ff575757" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/RelativeLayout2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:layout_alignParentTop="true">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/bbutton_info" android:id="@+id/et_location" android:layout_width="wrap_content" android:layout_height="35.0dip" android:hint="Enter the location" android:ems="10" android:layout_weight="75.0" android:inputType="text">
+                <requestFocus />
+            </EditText>
+            <Button android:id="@+id/btn_find_loc" android:background="@color/bbutton_info" android:layout_width="wrap_content" android:layout_height="35.0dip" android:text="Search" android:layout_weight="25.0" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/RelativeLayout4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/bConfirm_loc" android:background="@color/bbutton_info" android:layout_width="fill_parent" android:layout_height="30.0dip" android:text="Confirm Location" style="@+style/ButtonText" />
+            <Button android:id="@+id/bCancel_loc" android:background="@color/bbutton_info" android:layout_width="fill_parent" android:layout_height="30.0dip" android:text="Press Here to Cancel Alarm" style="@+style/ButtonText" />
+            <TextView android:textColor="#ffffffff" android:gravity="center" android:linksClickable="true" android:id="@+id/tvMsg" android:layout_width="fill_parent" android:layout_height="25.0dip" android:text="Long Press on the map to set your target" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/RelativeLayout3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/RelativeLayout4" android:layout_below="@id/RelativeLayout2" android:layout_alignParentLeft="true">
+        <fragment android:name="com.google.android.gms.maps.MapFragment" android:id="@+id/map_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</RelativeLayout>
